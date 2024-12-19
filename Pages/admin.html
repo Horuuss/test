@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Manage Users</a></li>
+            <li><a href="#">Site Settings</a></li>
+            <li><a href="#">Content Management</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Welcome to the Admin Dashboard</h1>
+            <p>Manage your website and user data here.</p>
+        </header>
+
+        <section class="dashboard">
+            <div class="card">
+                <h3></h3>
+                <p></p>
+            </div>
+            <div class="card">
+                <h3></h3>
+                <p></p>
+            </div>
+            <div class="card">
+                <h3></h3>
+                <p></p>
+            </div>
+        </section>
+
+        <section class="recent-activity">
+            <h2>Recent Activities</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <div id="navbar-container"></div>
+
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+                });
+        </script>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>
